@@ -1,0 +1,37 @@
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='emacs'
+fi
+
+export WORKON_HOME="~/.python_envs"
+
+alias vim="nvim"
+alias zshconfig="nvim ~/.zshrc"
+alias zshalias="nvim ~/.zshrc_personal"
+alias cat="bat"
+alias doom="~/.emacs.d/bin/doom"
+alias ls="exa -lahF --icons --color always --group-directories-first"
+alias add_wallpapers="rm -r ~/.config/leftwm/themes/current/backgrounds && ln -s ~/Pictures/wallpapers ~/.config/leftwm/themes/current/backgrounds"
+
+path=('/home/dez/.local/bin' $path)
+
+# Disable zsh-autocompletion on paste
+pasteinit() {
+  OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
+  zle -N self-insert url-quote-magic # I wonder if you'd need `.url-quote-magic`?
+}
+
+pastefinish() {
+  zle -N self-insert $OLD_SELF_INSERT
+}
+zstyle :bracketed-paste-magic paste-init pasteinit
+zstyle :bracketed-paste-magic paste-finish pastefinish
+
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+source ~/.local/bin/virtualenvwrapper.sh
