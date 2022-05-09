@@ -34,7 +34,7 @@
        doom-quit         ; DOOM quit-message prompts when you quit Emacs
        (emoji +unicode)  ; 🙂
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
-       ;;hydra
+       hydra
        ;;indent-guides     ; highlighted indent columns
        (ligatures +extra)         ; ligatures and symbols to make your code pretty again
        ;;minimap           ; show a map of the code on the side
@@ -82,7 +82,7 @@
        :checkers
        syntax              ; tasing you for every semicolon you forget
        (spell +aspell) ; tasing you for misspelling mispelling
-       grammar           ; tasing grammar mistake every you make
+       ;; grammar           ; tasing grammar mistake every you make
 
        :tools
        ansible                      ; a crucible for infrastructure as code
@@ -90,7 +90,7 @@
        ;;debugger          ; FIXME stepping through code, to help you add bugs
        ;;direnv
        (docker +lsp)                       ; port everything to containers
-       ;;editorconfig      ; let someone else argue about tabs vs spaces
+       editorconfig      ; let someone else argue about tabs vs spaces
        ;;ein               ; tame Jupyter notebooks with emacs
        (eval +overlay)     ; run code, run (also, repls)
        ;;gist              ; interacting with github gists
@@ -180,7 +180,7 @@
        ;;rest              ; Emacs as a REST client
        ;;rst               ; ReST in peace
        (ruby +lsp)     ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
-       ;;rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
+       (rust +lsp)              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        ;;scala             ; java, but good
        ;;(scheme +guile)   ; a fully conniving family of lisps
        sh                ; she sells {ba,z,fi}sh shells on the C xor

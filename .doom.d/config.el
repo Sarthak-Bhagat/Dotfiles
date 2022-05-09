@@ -107,3 +107,18 @@
           (lambda ()
             (set (make-local-variable 'buffer-face-mode-face) 'doom-font)
             (buffer-face-mode t)))
+
+;; (setq ispell-dictionary "en")
+(setq ispell-dictionary "en-custom")
+;; (setq ispell-alternate-dictionary (file-truename "/home/dez/Documents/Books/wordlist"))
+(setq ispell-personal-dictionary (expand-file-name ".ispell_personal" doom-private-dir))
+
+;; (set-company-backend!
+;;   '(text-mode
+;;     markdown-mode
+;;     org-mode
+;;     gfm-mode)
+;;   '(:seperate
+;;     company-ispell
+;;     company-files
+;;     company-yasnippet))
