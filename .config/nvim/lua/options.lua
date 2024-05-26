@@ -1,0 +1,1 @@
+C:/Users/Sarthak/AppData/Local/nvim/lua/options.lua
